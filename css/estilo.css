@@ -1,0 +1,42 @@
+:root{--fondo:#f5f2ee;--tarjeta:#ffffff;--tinta:#1c1c1c;--tenue:#6b6560;--borde:#ddd6cc;--rojo:#c41230;--rojo-oscuro:#9d0e26;--negro:#141414;--error:#a4161a;--exito:#1b6b3a}
+*{box-sizing:border-box}
+body{margin:0;font-family:Georgia,"Times New Roman",serif;background:var(--fondo);color:var(--tinta);line-height:1.55}
+.cabecera{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;padding:18px 28px;background:var(--negro);color:#fff;border-bottom:6px solid var(--rojo)}
+.marca{display:flex;flex-direction:column}
+.logo{font-family:Arial Black,Arial,sans-serif;font-size:1.8rem;letter-spacing:.12em;background:var(--rojo);padding:2px 14px;display:inline-block}
+.lema{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;margin-top:4px;color:#cfc8bf}
+.alumna{text-align:right;display:flex;flex-direction:column;font-family:Arial,sans-serif;font-size:.95rem}
+.alumna span{color:#cfc8bf}
+.barra{display:flex;justify-content:space-between;align-items:center;padding:10px 28px;background:#2a2a2a;color:#fff;font-family:Arial,sans-serif;font-size:.9rem}
+.barra a{color:#fff;border:1px solid #777;padding:5px 12px;text-decoration:none}
+.barra a:hover{background:var(--rojo);border-color:var(--rojo)}
+main{max-width:960px;margin:0 auto;padding:28px 16px 64px}
+main.angosto{max-width:440px}
+.tarjeta{background:var(--tarjeta);border:1px solid var(--borde);border-top:4px solid var(--rojo);padding:26px;margin-bottom:26px}
+h2{margin:0 0 16px;font-family:Arial,sans-serif;font-size:1.2rem;text-transform:uppercase;letter-spacing:.06em}
+.paso{margin:22px 0 10px;font-family:Arial,sans-serif;font-weight:700;color:var(--rojo)}
+label{display:block;font-family:Arial,sans-serif;font-size:.85rem;font-weight:700;margin:14px 0 6px}
+input,select,textarea{width:100%;padding:11px 12px;border:1px solid var(--borde);background:#fbfaf8;color:var(--tinta);font:inherit}
+:focus-visible{outline:3px solid var(--rojo);outline-offset:2px}
+.catalogo{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.catalogo label.prenda{margin:0;font-weight:400}
+.prenda input{position:absolute;opacity:0;width:1px;height:1px}
+.prenda-caja{display:flex;flex-direction:column;gap:4px;height:100%;padding:14px;border:2px solid var(--borde);background:#fbfaf8;cursor:pointer}
+.prenda-caja strong{font-family:Arial,sans-serif}
+.prenda-caja small{color:var(--tenue)}
+.precio{margin-top:auto;padding-top:6px;font-family:Arial,sans-serif;font-weight:700;color:var(--rojo)}
+.prenda input:checked + .prenda-caja{border-color:var(--rojo);background:#fff3f4}
+.prenda input:focus-visible + .prenda-caja{outline:3px solid var(--rojo);outline-offset:2px}
+.dos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:560px){.dos{grid-template-columns:1fr}.alumna{text-align:left}}
+.total{margin-top:20px;padding:12px 14px;background:var(--negro);color:#fff;font-family:Arial,sans-serif;display:flex;justify-content:space-between}
+.boton{display:block;width:100%;margin-top:16px;padding:13px;border:0;background:var(--rojo);color:#fff;font-family:Arial,sans-serif;font-weight:700;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
+.boton:hover{background:var(--rojo-oscuro)}
+.aviso{padding:10px 12px;border:1px solid currentColor;font-family:Arial,sans-serif;font-size:.9rem}
+.aviso.error{color:var(--error)}.aviso.exito{color:var(--exito)}
+.tenue{color:var(--tenue)}
+a{color:var(--rojo-oscuro)}
+.tabla{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-family:Arial,sans-serif;font-size:.9rem}
+th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--borde)}
+th{background:#efebe5}
